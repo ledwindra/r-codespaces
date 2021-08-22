@@ -1,7 +1,4 @@
-# r-codespaces
-
-# https://cran.r-project.org/
-To install R
+# Install R
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -23,8 +20,8 @@ sudo apt install --no-install-recommends r-base -y
 sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+ -y
 ```
 
-# Packages
-To install R packages
+# Notebook
+Install R packages
 
 ```R
 # sudo rm -rf /home/codespace/R/x86_64-pc-linux-gnu-library/4.1/devtools
@@ -59,4 +56,12 @@ sudo apt install r-cran-rgdal libudunits2-dev gfortran libgdal-dev libjq-dev lib
 ```R
 # https://geocompr.robinlovelace.net/
 remotes::install_github("geocompr/geocompkg", dependencies=TRUE)
+```
+
+# Uninstall all packages except base
+
+```bash
+# https://stackoverflow.com/questions/16382647/remove-all-packages-that-do-not-come-with-r
+cd ~/R/x86_64-pc-linux-gnu-library/
+rm -rf 4.1/
 ```

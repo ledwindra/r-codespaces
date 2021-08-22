@@ -42,3 +42,4 @@ vignettes/*.pdf
 .venv
 .ipynb_checkpoints/
 r-geocomputation/
+text-mining/

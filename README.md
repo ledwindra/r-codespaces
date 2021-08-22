@@ -36,3 +36,27 @@ install.packages('IRkernel')
 IRkernel::installspec()
 install.packages('IRdisplay')
 ```
+
+# GIS specific purposes
+
+## GDAL on Linux
+
+```bash
+# https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html
+sudo add-apt-repository ppa:ubuntugis/ppa
+sudo apt-get update
+sudo apt-get install gdal-bin -y
+export CPLUS_INCLUDE_PATH=/usr/include/gdal
+export C_INCLUDE_PATH=/usr/include/gdal
+
+# https://stackoverflow.com/questions/64826887/install-r-cran-rgdal-on-ubuntu-20-04
+# https://stackoverflow.com/questions/12141422/error-gdal-config-not-found-while-installing-r-dependent-packages-whereas-gdal
+sudo apt install r-cran-rgdal libudunits2-dev gfortran libgdal-dev libjq-dev libv8-dev libprotobuf-dev protobuf-compiler -y
+```
+
+## R Packages
+
+```R
+# https://geocompr.robinlovelace.net/
+remotes::install_github("geocompr/geocompkg", dependencies=TRUE)
+```
